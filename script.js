@@ -2,6 +2,7 @@ const btnColor = document.getElementsByClassName("btn-color")[0];
 const slider = document.querySelectorAll("input[type=range]");
 const label = document.querySelectorAll("#label");
 
+// merubah warna background dengan menggunakan class toggle.
 btnColor.addEventListener("click", function () {
   if (btnColor) {
     document.body.classList.toggle("active");
@@ -9,6 +10,7 @@ btnColor.addEventListener("click", function () {
   }
 });
 
+// menambah tombol baru untuk merubah warna background menjadi random tanpa merubah struktur HTML
 const tRandColor = document.createElement("button");
 const tBtn = document.createTextNode("Random Color");
 tRandColor.appendChild(tBtn);
@@ -27,6 +29,7 @@ tRandColor.addEventListener("click", function () {
   label[2].innerHTML = slider[2].value = b;
 });
 
+// merubah warna background dengan menggunakan slider
 for (let i = 0; i < slider.length; i++) {
   slider[i].addEventListener("input", function () {
     r = slider[0].value;
